@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/stylesheets/common.css" rel="stylesheet">
+        <link href="/stylesheets/diagnosis.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand brand_text" href="#">송골닥터</a>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="info_box">
+                <h2>예약 정보 확인</h2>
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small class="text-muted">3 days ago</small>
+                </div>
+                <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+
+            </div>
+            <div class="diagnosis_wrapper">
+                
+                <label for="diagnosis_comment" class="col-sm-2">Comment</label>
+                <textarea name="diagnosis_comment" id="diagnosis_comment" class="form-control" rows="3" required="required"></textarea>
+                
+                
+                <div id="medicine_wrapper">
+                    <label for="diagnosis_comment" class="col-sm-2">Medicine</label>
+                    
+                    <select name="medicine" id="select_medicine" class="form-control" required="required">
+                        <option value="0">감기약</option>
+                        <option value="1">두통약</option>
+                        <option value="2">항생제</option>
+                    </select>
+                    
+                    <button type="button" class="btn btn-info">추가</button>
+                    <hr>
+                    
+                    <ul id="medicine_list" class="list-group">
+                        <li class="list-group-item">항생제</li>
+                        <li class="list-group-item">감기약</li>
+                        <li class="list-group-item">두통약</li>
+                    </ul>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="/javascripts/diagnosis.js"></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+.wrapper{
+    padding: 30px;
+}
+.info_box{
+    width: 40%;
+    display: inline-block;
+}
+.diagnosis_wrapper{
+    float: right;
+    width: calc(60% - 60px);
+    display: inline-block;
+}
+#diagnosis_comment{
+    height: 300px;
+}
+#medicine_wrapper{
+    margin-top: 50px;
+}

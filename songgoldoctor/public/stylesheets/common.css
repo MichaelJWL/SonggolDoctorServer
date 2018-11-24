@@ -1,0 +1,10 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+.brand_text{
+    font-weight: bold;
+}
+.navbar{
+    background: white;
+}
+body{
+    font-family: 'Noto Sans KR';
+}
