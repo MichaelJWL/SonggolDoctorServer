@@ -17,5 +17,13 @@ router.get('/page/main',function(req, res, next){
     res.render('main.html');
   }
   
-})
+});
+router.get('/page/diag',function(req, res, next){
+  if(!req.session.hosp_info){
+    res.redirect('/');
+  }else{
+    res.render('diagnosis.html');
+  }
+  
+});
 module.exports = router;

@@ -1,0 +1,1 @@
+var hosp_dao = {};

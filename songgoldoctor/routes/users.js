@@ -45,18 +45,18 @@ router.post("/login",function(req, res, next){
       if(rows.length > 0){
         res.json({result: true});
       }else{
-        res.json({result: false, error: err});
+        res.json({result: false});
       }
     }else{
-      res.json({result: false});
+      res.json({result: false, error: err});
     }
   })
-})
+});
 router.post("/logout",function(req, res, next){
 //TODO: Logout process for android devices
 
   res.json({result:true});
-})
+});
 /* SELECT users */
 
 
