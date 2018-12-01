@@ -85,7 +85,7 @@ router.post("/login/:id/:password",function(req, res, next){
             res.json({result:false, error: err});
         }
     })
-  })
+  });
   /**
    * INSERT
    */
@@ -148,5 +148,5 @@ router.post("/login/:id/:password",function(req, res, next){
           }
       })
   });
-
+  
   module.exports = router;

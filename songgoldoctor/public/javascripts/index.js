@@ -20,5 +20,23 @@ $(document).ready(function(){
             }
         })
     });
-
-})
+    $("#get_hospital_info").click(function(){
+        $.ajax({
+            url:"/search/pharmacy",
+            method:"post",
+            data:{
+                lat:37.527751,
+                lng:127.118306,
+                radius:1000,
+                pagetoken:pagetoken
+            },
+            success:function(data){
+                console.log(data);
+                if(data.next_page_token){
+                    pagetoken = data.next_page_token;
+                }
+            }
+        })
+    })
+});
+var pagetoken = null;
