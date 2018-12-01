@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var https = require('https');
-var APIKEY = "AIzaSyAAm6XaiuQL0Pcc75RilRL9j2PEaEUgI7I";
+var APIKEY = require("../config").GOOGLEMAPS_PLACES_API;
 /**
  * 검색결과는 최대 20개 이며
  * 그보다 많을 시 next_page_token 값을 반환해준다.
