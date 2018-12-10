@@ -1,5 +1,5 @@
 
-var mysql      = require('mysql');
+var mysql = require('mysql');
 var connection = mysql.createConnection({
 host     : 'localhost',
 user     : 'songgoldoctor',
@@ -9,5 +9,4 @@ database : 'SonggolDoctor'
 });
 
 connection.connect();
-
 module.exports = connection;

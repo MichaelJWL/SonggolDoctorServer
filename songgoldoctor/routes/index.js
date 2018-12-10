@@ -18,12 +18,12 @@ router.get('/page/main',function(req, res, next){
   }
   
 });
-router.get('/page/diag',function(req, res, next){
+router.get('/page/diag/:resv_id',function(req, res, next){
+  var resv_id = req.params.resv_id;
   if(!req.session.hosp_info){
     res.redirect('/');
   }else{
-    res.render('diagnosis.html');
+    res.render('diagnosis.ejs',{resv_id:resv_id});
   }
-  
 });
 module.exports = router;

@@ -8,7 +8,10 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var hospitalRouter = require('./routes/hospital');
+var reserveRouter = require('./routes/reserve');
 var searchRouter = require('./routes/search');
+var diagnosisRouter = require('./routes/diagnosis');
+var medicineRouter = require('./routes/medicine');
 var app = express();
 
 var bodyparser = require('body-parser');
@@ -25,6 +28,7 @@ app.use(session({
 app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
+app.engine('ejs', require('ejs').renderFile);
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -33,12 +37,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hosp',hospitalRouter);
 app.use('/search',searchRouter);
-
+app.use('/resv',reserveRouter);
+app.use('/diag',diagnosisRouter);
+app.use('/medi',medicineRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

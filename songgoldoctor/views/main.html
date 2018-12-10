@@ -40,7 +40,7 @@
         <div class="wrapper">
             <div class="reservation_list">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                    <div class="list-group-item list-group-item-action flex-column align-items-start active">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">2018년 11월 28일 10:00 예약 (김xx 21세 남)</h5>
                         <small>2 minutes ago</small>
@@ -50,16 +50,16 @@
                         약이랑 주사도 놓아주세요ㅜㅠ 
                       </p>
                       <button type="button" class="btn btn-danger">예약확정하기</button>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    </div>
+                    <div href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">2018년 11월 27일 2:20 예약 (이xx 25세 남)</h5>
                         <small class="text-muted">30 minutes left</small>
                       </div>
                       <p class="mb-1">잦은 기침과 두통이 있습니다. 오늘은 열이 39도 까지 올라갔습니다.</p>
                       <button type="button" class="btn btn-info">검진시작</button>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    </div>
+                    <div href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">2018년 11월 27일 2:30 예약 (이xx 34세 여)</h5>
                         <small class="text-muted">40 minutes left</small>
@@ -68,21 +68,35 @@
                           독감 예방접종 신청
                       </p>
                       <button type="button" class="btn btn-info">검진시작</button>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="info_box">
-                <h2>예약 정보 확인</h2>
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">2018년 11월 28일 10:00 예약 (김xx 21세 남)</h5>
-                    <small class="text-muted">2 minutes ago</small>
-                </div>
-                <p class="mb-1">
-                    2일 전부터 고열, 오한, 두통, 근육통 등의 증상이 있습니다.<br>
-                        약이랑 주사도 놓아주세요ㅜㅠ 
-                </p>
-
-                <button type="button" class="btn btn-danger">예약 확정</button>
+                <h2>사용 방법</h2>
+                <br>
+                <br>
+                
+                <label for="confirm-resv" class="col-sm-2">
+                    예약 확정 하기
+                </label>
+                <ol id="confirm-resv">
+                    <li>예약 시간이 적절한지 우선 확인합니다.</li>
+                    <li>스케쥴에 문제가 없다면 "예약 확정 하기" 버튼을 클릭하여 예약을 허가합니다.</li>
+                </ol>
+                <label for="confirm-resv" class="col-sm-2">
+                    검진 시작 하기
+                </label>
+                <ol id="confirm-resv">
+                    <li>검진을 시작할 예약을 확인합니다.</li>
+                    <li>"검진 시작 하기" 버튼을 클릭하여 검진 페이지로 넘어가 검진을 시작합니다.</li>
+                </ol>
+                <label for="confirm-resv" class="col-sm-2">
+                    검진 결과 보기
+                </label>
+                <ol id="confirm-resv">
+                    <li>검진 기록을 확인하기 위해 사용하는 기능입니다.</li>
+                    <li>"검진 결과 보기" 버튼을 상세한 내용을 확인합니다.</li>
+                </ol>
             </div>
         </div>
         
@@ -90,7 +104,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Bootstrap JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/ko.js"></script>
         <script src="/javascripts/main.js"></script>
     </body>
 </html>
