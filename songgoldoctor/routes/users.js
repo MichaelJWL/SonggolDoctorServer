@@ -43,7 +43,7 @@ router.post("/login",function(req, res, next){
   dbconnection.query(query, function(err, rows, fields){
     if(!err){
       if(rows.length > 0){
-        res.json({result: true});
+        res.json({result: true, data: user_id});
       }else{
         res.json({result: false});
       }

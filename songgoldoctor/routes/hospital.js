@@ -56,6 +56,25 @@ router.post("/login/:id/:password",function(req, res, next){
   /**
    * GET
    */
+  //모든 병원 정보 가져오기
+  router.get("/",function(req, res, next){
+    var query = "SELECT * FROM hospital_info_view";
+    dbconnection.query( query,
+        function(err, rows, fields){
+          if(!err){
+            if(rows.length > 0){
+              res.json({"result":true,"data":rows});
+              
+            }else{
+              console.log("[LOG] failed!");
+              res.json({"result":false});
+            }
+          }else{
+            res.json({"result":false,"error":err});
+          }
+      });
+  });
+
   //병원 정보 조회
   router.get("/:hosp_id",function(req, res, next){
     var query = "SELECT * FROM hospital_info_view WHERE hosp_id = '"+req.params.hosp_id+"'";

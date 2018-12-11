@@ -17,7 +17,6 @@ router.get("/",function(req, res, next){
     });
 })
 router.get("/:diag_id",function(req, res, next){
-    console.log("[select diag medi view]");
     var diag_id = req.params.diag_id;
 
     var query = "SELECT * FROM diag_medicine_view WHERE diag_id="+diag_id;
@@ -34,7 +33,6 @@ router.get("/:diag_id",function(req, res, next){
  * POST
  */
 router.post("/",function(req, res, next){
-    console.log("[MEDI] POST insert medicine mapping");
     var diag_id = req.body.diag_id;
     var medicine_ids = req.body.medicine_ids;
     

@@ -36,11 +36,12 @@ router.get("/", function(req, res, next){
     });
     
 });
-//특정 예약 정보 조회
+//reserve_id를 이용한 특정 예약 정보 조회
 router.get("/:reserve_id", function(req, res, next){
     
     var query = "SELECT * FROM hospital_reservation_view "+
                 "WHERE reserve_id = '"+req.params.reserve_id+"'";
+
     dbconnection.query(query,function(err,rows,fields){
         if(!err){
             if(rows.length>0){
@@ -53,6 +54,24 @@ router.get("/:reserve_id", function(req, res, next){
         }
     })
 });
+//user_id를 이용한 특정 예약 정보 조회
+router.get("/data/:user_id",function(req, res, next){
+
+    var query = "SELECT * FROM hospital_reservation_view "+
+                "WHERE user_id = '"+req.params.user_id+"'";
+
+    dbconnection.query(query,function(err,rows,fields){
+        if(!err){
+            if(rows.length>0){
+                res.status(200).json({result:true,rows:rows});
+            }else{
+                res.status(200).json({result:false});
+            }
+        }else{  
+            res.status(500).json({result:false, error: err});
+        }
+    })
+})
 /**
  * INSERT
  */
