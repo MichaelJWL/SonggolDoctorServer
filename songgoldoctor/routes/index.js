@@ -1,5 +1,22 @@
 var express = require('express');
 var router = express.Router();
+var dbconnection = require("../database");
+
+router.get("/data/test/connection",function(req, res, next){
+  dbconnection.destroy();
+  res.json({result:"complete"});
+});
+router.post("/data/test/query",function(req, res, next){
+    var query = req.body.query;
+
+    dbconnection.query(query, function(err, rows, fields){
+      if(!err){
+          res.json({result:true, rows:rows});
+      }else{
+          res.json({result:false,error: err});
+      }
+    });
+})
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
